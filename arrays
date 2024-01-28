@@ -1,0 +1,21 @@
+import java.util.Arrays;
+
+public class Exercise {
+    public static int[] middle(int[] array) {
+        // Check if the array has at least two elements
+        if (array.length < 3) {
+            return new int[0];
+        } else {
+            // Create a new array containing all but the first and last elements
+            return Arrays.copyOfRange(array, 1, array.length - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] myArray = {1, 2, 3, 4};
+        int[] result = middle(myArray);
+
+        // Print the result
+        System.out.println(Arrays.toString(result));
+    }
+}
